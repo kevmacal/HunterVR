@@ -17,7 +17,7 @@ public class PlatformMovement : MonoBehaviour
         rb.interpolation = RigidbodyInterpolation.Interpolate;
         pointA=new Vector3(transform.position.x,transform.position.y,transform.position.z);
         pointB=new Vector3(transform.position.x+distanceX,transform.position.y+distanceY,transform.position.z+distanceZ);
-        journeyLength = Vector3.Distance(pointA, pointB);
+        //journeyLength = Vector3.Distance(pointA, pointB);
     }
 
     void FixedUpdate()
