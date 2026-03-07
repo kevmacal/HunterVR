@@ -137,6 +137,7 @@ MonoBehaviour:
   m_Name: HandTracking Android
   m_EditorClassIdentifier: Unity.XR.Hands::UnityEngine.XR.Hands.OpenXR.HandTracking
   m_enabled: 0
+  <failedInitialization>k__BackingField: 0
   nameUi: Hand Tracking Subsystem
   version: 0.0.1
   featureIdInternal: com.unity.openxr.feature.input.handtracking
@@ -146,6 +147,7 @@ MonoBehaviour:
   targetOpenXRApiVersion: 
   required: 0
   customRuntimeLoaderName: 
+  m_ShouldBeRunning: 0
 --- !u!114 &-5115429370872387555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -437,7 +439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feeef8d85de8db242bdda70cc7ff5acd, type: 3}
   m_Name: OculusTouchControllerProfile Android
   m_EditorClassIdentifier: Unity.XR.OpenXR::UnityEngine.XR.OpenXR.Features.Interactions.OculusTouchControllerProfile
-  m_enabled: 0
+  m_enabled: 1
   nameUi: Oculus Touch Controller Profile
   version: 0.0.1
   featureIdInternal: com.unity.openxr.feature.input.oculustouch
@@ -505,7 +507,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f647cc0545697264a9878224faada6d5, type: 3}
   m_Name: MetaQuestFeature Android
   m_EditorClassIdentifier: Unity.XR.OpenXR.Features.MetaQuestSupport::UnityEngine.XR.OpenXR.Features.MetaQuestSupport.MetaQuestFeature
-  m_enabled: 0
+  m_enabled: 1
   nameUi: Meta Quest Support
   version: 1.0.0
   featureIdInternal: com.unity.openxr.feature.metaquest
@@ -712,7 +714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feeef8d85de8db242bdda70cc7ff5acd, type: 3}
   m_Name: OculusTouchControllerProfile Standalone
   m_EditorClassIdentifier: Unity.XR.OpenXR::UnityEngine.XR.OpenXR.Features.Interactions.OculusTouchControllerProfile
-  m_enabled: 0
+  m_enabled: 1
   nameUi: Oculus Touch Controller Profile
   version: 0.0.1
   featureIdInternal: com.unity.openxr.feature.input.oculustouch
@@ -764,6 +766,7 @@ MonoBehaviour:
   m_Name: HandTracking Standalone
   m_EditorClassIdentifier: Unity.XR.Hands::UnityEngine.XR.Hands.OpenXR.HandTracking
   m_enabled: 0
+  <failedInitialization>k__BackingField: 0
   nameUi: Hand Tracking Subsystem
   version: 0.0.1
   featureIdInternal: com.unity.openxr.feature.input.handtracking
@@ -773,6 +776,7 @@ MonoBehaviour:
   targetOpenXRApiVersion: 
   required: 0
   customRuntimeLoaderName: 
+  m_ShouldBeRunning: 0
 --- !u!114 &4667436706299675458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -832,6 +836,7 @@ MonoBehaviour:
   m_Name: MetaHandTrackingAim Standalone
   m_EditorClassIdentifier: Unity.XR.Hands::UnityEngine.XR.Hands.OpenXR.MetaHandTrackingAim
   m_enabled: 0
+  <failedInitialization>k__BackingField: 0
   nameUi: Meta Hand Tracking Aim
   version: 0.0.1
   featureIdInternal: com.unity.openxr.feature.input.metahandtrackingaim
@@ -1030,6 +1035,7 @@ MonoBehaviour:
   m_Name: MetaHandTrackingAim Android
   m_EditorClassIdentifier: Unity.XR.Hands::UnityEngine.XR.Hands.OpenXR.MetaHandTrackingAim
   m_enabled: 0
+  <failedInitialization>k__BackingField: 0
   nameUi: Meta Hand Tracking Aim
   version: 0.0.1
   featureIdInternal: com.unity.openxr.feature.input.metahandtrackingaim
@@ -1061,7 +1067,6 @@ MonoBehaviour:
   - {fileID: -1971606058565328608}
   - {fileID: 2381093238577790170}
   - {fileID: -268145712180431663}
-  - {fileID: 5220459067444214612}
   - {fileID: -1715056237014511013}
   - {fileID: 5767745051660839973}
   - {fileID: -1085104546376154553}
@@ -1072,7 +1077,6 @@ MonoBehaviour:
   - {fileID: 933256212318209125}
   - {fileID: -8308153414554868287}
   - {fileID: 5227198666615221155}
-  - {fileID: 4480829953391006413}
   customLoaderName: 
   m_renderMode: 1
   m_latencyOptimization: 0
@@ -1110,7 +1114,6 @@ MonoBehaviour:
   - {fileID: 1819884723285941418}
   - {fileID: 370679930098319353}
   - {fileID: 7633247796298925675}
-  - {fileID: 8364871564346319088}
   - {fileID: 1179241102628165542}
   - {fileID: -7534195173992031132}
   - {fileID: -6949593977849881052}
@@ -1121,7 +1124,6 @@ MonoBehaviour:
   - {fileID: 7588769493166342581}
   - {fileID: -5115429370872387555}
   - {fileID: 1774789995781023382}
-  - {fileID: -5888199159515754444}
   customLoaderName: 
   m_renderMode: 1
   m_latencyOptimization: 0
@@ -1130,7 +1132,7 @@ MonoBehaviour:
     m_List: 00000000
   m_depthSubmissionMode: 0
   m_spacewarpMotionVectorTextureFormat: 0
-  m_optimizeBufferDiscards: 0
+  m_optimizeBufferDiscards: 1
   m_symmetricProjection: 0
   m_optimizeMultiviewRenderRegions: 0
   m_multiviewRenderRegionsOptimizationMode: 0
