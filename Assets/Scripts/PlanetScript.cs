@@ -26,6 +26,11 @@ public class PlanetScript : MonoBehaviour
         rb.isKinematic = false;
         rb.useGravity = true;
     }
+    public void DesactivarFisicas()
+    {
+        rb.isKinematic = true;
+        rb.useGravity = false;
+    }
     public void Activate()
     {
         isActive=true;
@@ -46,12 +51,13 @@ public class PlanetScript : MonoBehaviour
 
     public void ResetearPlaneta()
     {
-        rb.isKinematic = true;
-        rb.useGravity = false;
-        isActive=false;
         //Dejar sin fuerzas
         rb.linearVelocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
+
+        DesactivarFisicas();
+        isActive=false;
+        
         //Mover al inicio
         transform.position = posicionInicial;
         transform.rotation = rotacionInicial;
