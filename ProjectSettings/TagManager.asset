@@ -8,11 +8,14 @@ TagManager:
   - CuboVerde
   - CuboRojo
   - CuboAzul
+  - OOB
+  - Rock
+  - Floor
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - OOB
   - Water
   - UI
   - Ground
