@@ -7,8 +7,8 @@ public class CanvasPlayer : MonoBehaviour
 {
     // Referencia a la acción del botón B del mando derecho
     [SerializeField] private InputActionReference toggleAction;
-    [SerializeField] UnityEngine.XR.Interaction.Toolkit.Interactors.XRRayInteractor rightControl;
-    [SerializeField] UnityEngine.XR.Interaction.Toolkit.Interactors.XRRayInteractor leftControl;
+    //[SerializeField] UnityEngine.XR.Interaction.Toolkit.Interactors.XRRayInteractor rightControl;
+    //[SerializeField] UnityEngine.XR.Interaction.Toolkit.Interactors.XRRayInteractor leftControl;
     
     private Canvas canvasComponent;
 
@@ -36,15 +36,15 @@ public class CanvasPlayer : MonoBehaviour
         canvasComponent.enabled = !canvasComponent.enabled;
         if (canvasComponent.enabled)
         {
-            rightControl.lineType=UnityEngine.XR.Interaction.Toolkit.Interactors.XRRayInteractor.LineType.StraightLine;
+            //rightControl.lineType=UnityEngine.XR.Interaction.Toolkit.Interactors.XRRayInteractor.LineType.StraightLine;
             //rightControl.maxRaycastDistance = 20f;
-            leftControl.lineType=UnityEngine.XR.Interaction.Toolkit.Interactors.XRRayInteractor.LineType.StraightLine;
+            //leftControl.lineType=UnityEngine.XR.Interaction.Toolkit.Interactors.XRRayInteractor.LineType.StraightLine;
             //leftControl.maxRaycastDistance = 20f;
         }
         else
         {
-            rightControl.lineType = UnityEngine.XR.Interaction.Toolkit.Interactors.XRRayInteractor.LineType.ProjectileCurve;
-            leftControl.lineType = UnityEngine.XR.Interaction.Toolkit.Interactors.XRRayInteractor.LineType.ProjectileCurve;
+            //rightControl.lineType = UnityEngine.XR.Interaction.Toolkit.Interactors.XRRayInteractor.LineType.ProjectileCurve;
+            //leftControl.lineType = UnityEngine.XR.Interaction.Toolkit.Interactors.XRRayInteractor.LineType.ProjectileCurve;
         }
         
         //Debug.Log("Canvas Presionado: " + canvasComponent.enabled);

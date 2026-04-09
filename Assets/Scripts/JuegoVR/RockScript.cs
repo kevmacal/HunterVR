@@ -4,14 +4,23 @@ public class RockScript : MonoBehaviour
 {
     private bool isSelected=false;
     private bool isOnFloor=true;
+    private bool isUsed=false;
     public bool GetIsRockSelected()
     {
-        Debug.Log($"S:{isSelected} F:{isOnFloor}");
+        //Debug.Log($"S:{isSelected} F:{isOnFloor}");
         if (!isOnFloor&&!isSelected)
         {
             return false;
         }
         return true;
+    }
+    public bool GetIsUsed()
+    {
+        return isUsed;
+    }
+    public void UseRock()
+    {
+        isUsed=true;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -28,6 +37,7 @@ public class RockScript : MonoBehaviour
         if (other.CompareTag("Floor"))
         {
             isOnFloor=false;
+            isUsed=false;
         }
         
     }

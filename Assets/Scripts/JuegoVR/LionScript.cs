@@ -3,6 +3,8 @@ using UnityEngine;
 public class LionScript : MonoBehaviour
 {
     [SerializeField] GameManagerJuegoVR GM;
+    [SerializeField] AudioController LionSound;
+    [SerializeField] AudioController CatSound;
     private bool isLionActive=true;
     public float speed = 2.0f;        // Velocidad
     public float distance = 3.0f;     // Distancia recorrida
@@ -46,18 +48,27 @@ public class LionScript : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        if (other.CompareTag("Player")&&!isLionActive)
+        {
+            CatSound.ReproducirMusica();
+        }
         if (other.CompareTag("Player")&&isLionActive)
-        {            
+        {   
+            LionSound.ReproducirMusica();         
             GM.DoDamage(10);                  
         }
         if (other.CompareTag("Rock"))
         {
             RockScript rScript = other.GetComponentInParent<RockScript>();
-            Debug.Log($"L:{rScript.GetIsRockSelected()}");
-            if (!rScript.GetIsRockSelected())
+            //Debug.Log($"L:{rScript.GetIsRockSelected()}");
+            if (!rScript.GetIsRockSelected()&&!rScript.GetIsUsed())
             {
-                GM.SumarCoin();
-                GM.SumarCoin(); 
+                if (isLionActive)
+                {
+                    GM.SumarCoin();
+                    GM.SumarCoin();                
+                }
+                rScript.UseRock();
                 isLionActive=false;
             }
             

@@ -11,10 +11,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/VR_Clase1.unity
     guid: 89edd6758dafb194f9df4e35dcafa200
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MuseoVR.unity
     guid: a9518206ffbf7fc49ade94ab220d062e
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/HunterVR.unity
     guid: bbeb5a50e35ff834fbd67f23db5a519d
   m_configObjects:
